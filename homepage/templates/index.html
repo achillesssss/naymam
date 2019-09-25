@@ -1,0 +1,93 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">\
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img alt="naymam" src="{% static 'logo.png' %}" />
+    </div>
+    <div class="leaf">
+      <img alt="leaf" src="{% static 'leaf.png' %}" />
+    </div>
+    <div class='intro'>
+      a little project contributing</br>the green fields into our daily life,</br>and bringing a big inspiration to people.
+    </div>
+    <div class='sub-intro'>
+        một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
+    </div>
+    <div class="block-1" style="background-image: url('/static/texture.png')">
+      <div style="display: flex;">
+        <div style="flex: 1; display: flex; flex-direction: column; border-right: 1px solid #E6E9E7;">
+          <div class='text impact-color'>When is it the best time to plant a tree? 20 years ago. Second best time, today! — Chinese proverb. Here are 2 simple ways you can plant trees and help reverse climate change without getting your hands dirty. Money can really help to have a social impact. If you find that you’re not making a large enough impact by simply using Ecosia, you can also donate to nonprofits to help plant trees.</div>
+          <div class='text green-color'>When is it the best time to plant a tree? 20 years ago. Second best time, today! — Chinese proverb. Here are 2 simple ways you can plant trees and help reverse climate change without getting your hands dirty. Money can really help to have a social impact. If you find that you’re not making a large enough impact by simply using Ecosia, you can also donate to nonprofits to help plant trees.</div>
+        </div>
+        <div style="flex: 1">
+
+        </div>
+      </div>
+    </div>
+    <div class='block-content'>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a class="nav-link intro pill active" data-toggle="tab" href="#home">showcase</br>các tác phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link intro pill" data-toggle="tab" href="#menu1">exhibition</br>triễn lãm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link intro pill" data-toggle="tab" href="#menu2">about us</br>giới thiệu</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+          <div id="home" class="container tab-pane active"><br>
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div id="menu2" class="container tab-pane fade"><br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          </div>
+        </div>
+
+      <!-- <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+          <a class="nav-link active intro" href="#">
+            <span>showcase</span>
+            </br>
+            <span>các tác phẩm</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="intro" href="#">
+            <span>exhibition</span>
+            </br>
+            <span>triễn lãm</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="intro" href="#">
+            <span>about us</span>
+            </br>
+            <span>giới thiệu</span>
+          </a>
+        </li>
+      </ul> -->
+    </div>
+  </div>
+</body>
+</html>
