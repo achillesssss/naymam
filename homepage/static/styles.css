@@ -11,6 +11,12 @@ body {
   margin-left: 15%;
 }
 
+.leaf1 {
+  position: absolute;
+  right: 20%;
+  top: 495px;
+}
+
 .intro {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;

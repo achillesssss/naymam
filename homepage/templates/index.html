@@ -20,8 +20,11 @@
     <div class='intro'>
       a little project contributing</br>the green fields into our daily life,</br>and bringing a big inspiration to people.
     </div>
+    <div class="leaf1">
+      <img alt="leaf" src="{% static 'leaf1.png' %}" />
+    </div>
     <div class='sub-intro'>
-        một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
+      một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
     </div>
     <div class="block-1" style="background-image: url('/static/texture.png')">
       <div style="display: flex;">
@@ -51,8 +54,11 @@
       <!-- Tab panes -->
       <div class="tab-content">
           <div id="home" class="container tab-pane active"><br>
-            <h3>HOME</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            {% for picture in pictures %}
+              <div>
+                <img width="256"alt={{picture.description}} src={{picture.url}}/>
+              </div>
+            {% endfor %}
           </div>
           <div id="menu1" class="container tab-pane fade"><br>
             <h3>Menu 1</h3>
