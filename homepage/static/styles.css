@@ -76,3 +76,53 @@ body {
   border-left: none !important;
   border-right: none !important;
 }
+
+.author {
+  margin-top: 24px;
+  font-family: Montserrat;
+  font-weight: normal;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  color: #022B21
+}
+
+.picture {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+}
+
+.pill {
+  margin-top: 0px !important;
+  padding-bottom: 16px !important;
+}
+
+.nav-item {
+  height: 115px;
+}
+
+/* .nav-item .active {
+  padding-top: 0px !important;
+} */
+
+.nav-link {
+  padding-top: 34px !important;
+  padding-bottom: 16px !important;
+}
+
+.full-leaf {
+  display: none;
+  margin: auto
+}
+
+.active .full-leaf {
+  display: block;
+}
+
+.nav-item .active {
+  padding-top: 0px !important;
+}
+
+.picture-container {
+  display: flex;
+  justify-content: space-between;
+}

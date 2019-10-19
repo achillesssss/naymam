@@ -12,7 +12,20 @@ def picture_to_json(picture):
 
 def index(request):
   pictures = Picture.objects.all()
-  picture_data = []
+  picture_data1 = []
+  picture_data2 = []
+  picture_data3 = []
+  turn = 1
   for picture in pictures:
-    picture_data.append(picture_to_json(picture))
-  return render(request, 'index.html', {'pictures': picture_data})
+    if turn % 3 == 1:
+      picture_data1.append(picture_to_json(picture))
+    elif turn % 3 == 2:
+      picture_data2.append(picture_to_json(picture))
+    elif turn % 3 == 0:
+      picture_data3.append(picture_to_json(picture))
+    turn += 1
+  return render(request, 'index.html', {
+    'pictures1': picture_data1,
+    'pictures2': picture_data2,
+    'pictures3': picture_data3
+  })

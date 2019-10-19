@@ -41,24 +41,54 @@
       <!-- Nav tabs -->
       <ul class="nav nav-tabs nav-justified">
         <li class="nav-item">
-          <a class="nav-link intro pill active" data-toggle="tab" href="#home">showcase</br>các tác phẩm</a>
+          <a class="nav-link intro pill active" data-toggle="tab" href="#home">
+            <img  class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
+            showcase</br>các tác phẩm
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link intro pill" data-toggle="tab" href="#menu1">exhibition</br>triễn lãm</a>
+          <a class="nav-link intro pill" data-toggle="tab" href="#menu1">
+            <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
+            exhibition</br>triễn lãm
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link intro pill" data-toggle="tab" href="#menu2">about us</br>giới thiệu</a>
+          <a class="nav-link intro pill" data-toggle="tab" href="#menu2">
+            <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
+            about us</br>giới thiệu
+          </a>
         </li>
       </ul>
 
       <!-- Tab panes -->
       <div class="tab-content">
           <div id="home" class="container tab-pane active"><br>
-            {% for picture in pictures %}
-              <div>
-                <img width="256"alt={{picture.description}} src={{picture.url}}/>
+            <div class='picture-container'>
+              <div class='col1'>
+                {% for picture in pictures1 %}
+                  <div class='picture'>
+                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <div class='author'>{{picture.author}}</div>
+                  </div>
+                {% endfor %}
               </div>
-            {% endfor %}
+              <div class='col2'>
+                {% for picture in pictures2 %}
+                  <div class='picture'>
+                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <div class='author'>{{picture.author}}</div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class='col3'>
+                {% for picture in pictures3 %}
+                  <div class='picture'>
+                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <div class='author'>{{picture.author}}</div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
           </div>
           <div id="menu1" class="container tab-pane fade"><br>
             <h3>Menu 1</h3>
