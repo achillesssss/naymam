@@ -294,9 +294,11 @@ body {
 
 .role, .name {
   margin: 0;
+  text-align: center
 }
 
 .role {
+  margin-top: 16px;
   color: #022B21;
 }
 
