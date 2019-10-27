@@ -163,3 +163,154 @@ body {
 .categories > a > .vie {
   color: #022B21 !important;
 }
+
+/* Tab 2 */
+#menu1 .title {
+  font-family: Courier;
+  font-size: 36px;
+  line-height: 32px;
+  /* identical to box height, or 89% */
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  margin-top: 48px;
+  /* nay-mam/impact */
+  color: #022B21;
+}
+
+.exhibition {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  color: #022B21;
+  font-family: Montserrat;
+  margin-top: 56px;
+}
+
+.exhibition_vie {
+  margin-top: 56px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  color: #3F9C67;
+  font-family: Montserrat;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .col1 {
+  margin-right: 100px;
+  /* min-width: 480px; */
+  flex: 1;
+}
+
+.content .col2 {
+  flex: 1;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.time > span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  /* or 200% */
+  letter-spacing: 0.08em;
+}
+
+.time > .content {
+  color: #3F9C67;
+}
+
+.time > .label {
+  color: #022B21;
+}
+
+.location {
+  margin-top: 22px;
+  margin-bottom: 24px;
+}
+
+.messenger {
+  background: #0084FF;
+  border-radius: 24px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.fb {
+  padding: 12px;
+  background: #4267B2;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.social-network {
+  display: flex;
+}
+
+.fb span, .messenger span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+}
+
+.fb {
+  margin-left: 24px;
+}
+
+.marginLeft {
+  margin-left: 22px;
+}
+
+.sponsor {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.role, .name {
+  margin: 0;
+}
+
+.role {
+  color: #022B21;
+}
+
+.name {
+  color: #3F9C67
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.staylab {
+  border-radius: 50%;
+  background-color: #022B21;
+  width: 100px;
+  height: 100px;
+}
