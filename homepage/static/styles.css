@@ -64,7 +64,7 @@ body {
 }
 
 .block-content {
-  margin: 120px 15% 200px 15%;
+  margin: 120px 200px 200px 200px;
 }
 
 .nav-tabs .nav-link.active {
@@ -125,4 +125,41 @@ body {
 .picture-container {
   display: flex;
   justify-content: space-between;
+}
+
+.categories {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 48px;
+}
+
+.categories > a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+  padding: 11px 24px;
+  background-color: #F7F9F3;
+  border: 1px solid #3F9C67;
+  box-sizing: border-box;
+  border-radius: 24px;
+  margin-right: 40px;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.categories > a:hover {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.categories > a > .eng {
+  color: #3F9C67 !important;
+}
+
+.categories > a > .vie {
+  color: #022B21 !important;
 }

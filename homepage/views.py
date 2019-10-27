@@ -11,7 +11,11 @@ def picture_to_json(picture):
   }
 
 def index(request):
+  category = request.GET.get('category')
   pictures = Picture.objects.all()
+  if category:
+    if category != 'all':
+      pictures = pictures.filter(category=category)
   picture_data1 = []
   picture_data2 = []
   picture_data3 = []
@@ -24,6 +28,7 @@ def index(request):
     elif turn % 3 == 0:
       picture_data3.append(picture_to_json(picture))
     turn += 1
+
   return render(request, 'index.html', {
     'pictures1': picture_data1,
     'pictures2': picture_data2,
