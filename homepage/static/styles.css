@@ -38,7 +38,7 @@ body {
 }
 
 .block-1 {
-  height: 560px;
+  height: fit-content;
   width: 100%;
   background-color: #C4C4C4;
   opacity: 0.8;
@@ -52,7 +52,7 @@ body {
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
-  margin: 50px 11% 0px 28%;
+  margin: 40px 11% 0px 28%;
 }
 
 .green-color {
@@ -233,7 +233,6 @@ body {
   font-weight: normal;
   font-size: 13px;
   line-height: 26px;
-  /* or 200% */
   letter-spacing: 0.08em;
 }
 
