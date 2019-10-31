@@ -69,6 +69,7 @@ body {
 
 .nav-tabs .nav-link.active {
   border-bottom-color: #3F9C67 !important;
+  border: 2px solid transparent
 }
 
 .nav-link {
