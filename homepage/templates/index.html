@@ -310,27 +310,27 @@
         </a>
         <div id="menu2" class="container" style='display: block'>
           <div class='categories'>
-            <a id='cate1' href="?category=all#home" onclick="select(1)">
+            <a id='all' href="?category=all#home" onclick="select(1)">
               <span class='eng'>🗂️All</span>
                 |
               <span class='vie'>Tất cả</span>
             </a>
-            <a id='cate2' href="?category=soil#home" onclick="select(2)">
+            <a id='soil' href="?category=soil#home" onclick="select(2)">
               <span class='eng'>🌫️Soil</span>
                 |
               <span class='vie'>Đất</span>
             </a>
-            <a id='cate3' href="?category=water#home" onclick="select(3)">
+            <a id='water' href="?category=water#home" onclick="select(3)">
               <span class='eng'>💦Water</span>
                 |
               <span class='vie'>Nước</span>
             </a>
-            <a id='cate4' href="?category=air#home" onclick="select(4)">
+            <a id='air' href="?category=air#home" onclick="select(4)">
               <span class='eng'>💨Air</span>
                 |
               <span class='vie'>Không khí</span>
             </a>
-            <a id='cate5' href="?category=light#home" onclick="select(5)">
+            <a id='light' href="?category=light#home" onclick="select(5)">
               <span class='eng'>☀️️Light</span>
                 |
               <span class='vie'>Ánh sáng</span>
@@ -363,9 +363,13 @@
 <script>
   $(document).ready(
     function(){
-
     }
   )
+  if (window.screen.availWidth <= 480) {
+    var element = document.getElementsByClassName('tab-content')[0];
+  }
+
+  element.parentNode.removeChild(element);
   const url_string = window.location.href;
   var url = new URL(url_string);
   var c = url.searchParams.get("category");
@@ -373,7 +377,7 @@
   if (xx == null) {
     var xx = document.getElementById('all');
   }
-  // console.log(xx);
+  console.log(xx);
   xx.classList.add('selected');
   // function select(n) {
   //   var element = document.getElementById("cate" + n);
