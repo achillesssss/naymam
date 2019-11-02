@@ -484,3 +484,18 @@ body {
     margin-bottom: 40px;
   }
 }
+
+.loading {
+  height: -webkit-fill-available;
+  position: relative;
+  border: 3px solid green;
+}
+
+.loading_center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
