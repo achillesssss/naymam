@@ -28,13 +28,15 @@
       một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
     </div>
     <div class="block-1" style="background-image: url('/static/texture.png')">
-      <div style="display: flex;">
-        <div style="flex: 1; display: flex; flex-direction: column; border-right: 2px solid #E6E9E7; padding: 20px 0px 70px 0px">
+      <div style="display: flex;" class='intro-block'>
+        <div class='introduction'>
           <div class='text impact-color'>The project includes around 100 works by 88 artists with media ranging from illustration, graphic design to graphic novel and sculpture. By sharing the experience via visual works, we hope to encourage the public to engage more in growing plants. The ultimate goal of Nảy Mầm is to simply tell a story about our plant experience and hope that people can feel the joy that comes with growing a plant.</div>
           <div class='text green-color'>Dự án có sự tham gia của 88 nghệ sĩ với các tác phẩm bao gồm nhiều hình thức chất liệu. Bằng việc chia sẻ về trải nghiệm của các nghệ sĩ thông qua các tác phẩm tham gia, dự án mong muốn có thể góp phần khuyến khích cộng đồng làm quen với việc trồng cây. Không đặt ra cho mình một mục đích to lớn, chúng tôi chỉ muốn chia sẻ việc trồng cây của bản thân và hy vọng mọi người có thể cảm nhận được niềm vui đến từ việc chăm sóc một cái cây.</div>
         </div>
-        <div style="flex: 1">
-
+        <div style="flex: 1; margin: auto">
+          <div class='center'>
+            <img class='circle' src="{% static 'stay.png' %}" >
+          </div>
         </div>
       </div>
     </div>
@@ -44,55 +46,56 @@
         <li class="nav-item">
           <a class="nav-link intro pill active" data-toggle="tab" href="#home">
             <img  class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
-            showcase</br>các tác phẩm
+            <span class='impact-color'>showcase</span></br>
+            <span class='green-color'>các tác phẩm</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link intro pill" data-toggle="tab" href="#menu1">
             <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
-            exhibition</br>triễn lãm
+            <span class='impact-color'>exhibition</span></br>
+            <span class='green-color'>triễn lãm</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link intro pill" data-toggle="tab" href="#menu2">
             <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
-            about us</br>giới thiệu
+            <span class='impact-color'>about us</span></br>
+            <span class='green-color'>giới thiệu</span>
           </a>
         </li>
       </ul>
-
-      <!-- Tab panes -->
       <div class="tab-content">
-          <div id="home" class="container tab-pane active"><br>
+          <div id="home" class="container tab-pane active">
             <div class='categories'>
-              <a href="?category=all#home">
-                <span class='eng'>🗂️All</span>
-                 |
-                <span class='vie'>Tất cả</span>
-              </a>
-              <a href="?category=soil#home">
-                <span class='eng'>🌫️Soil</span>
-                 |
-                <span class='vie'>Đất</span>
-              </a>
-              <a href="?category=water#home">
-                <span class='eng'>💦Water</span>
-                  |
-                <span class='vie'>Nước</span>
-              </a>
-              <a href="?category=air#home">
-                <span class='eng'>💨Air</span>
-                  |
-                <span class='vie'>Không khí</span>
-              </a>
-              <a href="?category=light#home">
-                <span class='eng'>☀️️Light</span>
-                  |
-                <span class='vie'>Ánh sáng</span>
-              </a>
+                <a id='all' href="?category=all#home" onclick="select(1)">
+                  <span class='eng'>🗂️All</span>
+                    |
+                  <span class='vie'>Tất cả</span>
+                </a>
+                <a id='soil' href="?category=soil#home"onclick="select(2)">
+                  <span class='eng'>🌫️Soil</span>
+                    |
+                  <span class='vie'>Đất</span>
+                </a>
+                <a id='water' href="?category=water#home"onclick="select(3)">
+                  <span class='eng'>💦Water</span>
+                    |
+                  <span class='vie'>Nước</span>
+                </a>
+                <a id='air' href="?category=air#home"onclick="select(4)">
+                  <span class='eng'>💨Air</span>
+                    |
+                  <span class='vie'>Không khí</span>
+                </a>
+                <a id='light' href="?category=light#home"onclick="select(5)">
+                  <span class='eng'>☀️️Light</span>
+                    |
+                  <span class='vie'>Ánh sáng</span>
+                </a>
             </div>
-            <div class='picture-container'>
-              <div class='col1'>
+            <div class='row'>
+              <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures1 %}
                   <div class='picture'>
                     <img width="256"alt={{picture.description}} src={{picture.url}} />
@@ -100,7 +103,7 @@
                   </div>
                 {% endfor %}
               </div>
-              <div class='col2'>
+              <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures2 %}
                   <div class='picture'>
                     <img width="256"alt={{picture.description}} src={{picture.url}} />
@@ -108,7 +111,7 @@
                   </div>
                 {% endfor %}
               </div>
-              <div class='col3'>
+              <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures3 %}
                   <div class='picture'>
                     <img width="256"alt={{picture.description}} src={{picture.url}} />
@@ -123,10 +126,7 @@
             <div class='content'>
               <div class='col1'>
                 <div class='map-responsive'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.395138260709!2d106.70496095033376!3d10.781017992280738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f05ed105d67%3A0x1122b5cc2ec54b4a!2sThe%20Hummingbird%20Cafe!5e0!3m2!1sen!2s!4v1572163709955!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                  <!-- <div class="mapouter">
-                    <div class="gmap_canvas">
-                      <iframe width="480" height="320" id="gmap_canvas" src="https://maps.google.com/maps?q=The%20Hummingbird%20Cafe&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.utilitysavingexpert.com">Utility Saving Expert</a></div><style>.mapouter{position:relative;text-align:right;height:320px;width:480px;}.gmap_canvas {overflow:hidden;background:none!important;height:320px;width:480px;}</style></div> -->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.395138260709!2d106.70496095033376!3d10.781017992280738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f05ed105d67%3A0x1122b5cc2ec54b4a!2sThe%20Hummingbird%20Cafe!5e0!3m2!1sen!2s!4v1572163709955!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
               </div>
               <div class='col2'>
@@ -207,31 +207,206 @@
               </div>
             </div>
           </div>
-
-      <!-- <ul class="nav nav-pills nav-justified">
-        <li class="nav-item">
-          <a class="nav-link active intro" href="#">
-            <span>showcase</span>
-            </br>
-            <span>các tác phẩm</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="intro" href="#">
-            <span>exhibition</span>
-            </br>
-            <span>triễn lãm</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="intro" href="#">
-            <span>about us</span>
-            </br>
-            <span>giới thiệu</span>
-          </a>
-        </li>
-      </ul> -->
-    </div>
+      </div>
+      <!-- MOBILE -->
+      <div class='mobile'>
+        <a id='menuu0' class="nav-link intro pill" data-toggle="tab" href="#menu2" onclick="expand(0)">
+          <img id='plus' class='full-leaf expand' alt='leaf' src="{% static 'expand.png' %}" width='24' height='24' />
+          <img class='full-leaf collapse' alt='leaf' src="{% static 'collapse.png' %}" width='24' height='24' />
+          <span class='impact-color'>about us</span></br>
+          <span class='green-color'>giới thiệu</span>
+        </a>
+        <div id="menu0" class="container tab-pane"><br>
+          <div class='sponsor'>
+            <div>
+              <img class='circle' width='100' height='100' src="{% static 'Tinsideout.png' %}" >
+              <div class='role textt texttt'>project leader</div>
+              <div class='name textt'>Tinsideout</div>
+            </div>
+            <div>
+              <img class='circle' width='100' height='100' src="{% static 'Datdotr.png' %}" >
+              <div class='role textt texttt'>logo design</div>
+              <div class='name textt'>Datdotr</div>
+            </div>
+          </div>
+          <div class='sponsor'>
+            <div>
+              <img class='circle' width='100' height='100' src="{% static 'cafe.png' %}" >
+              <div class='role textt texttt'>location vendor</div>
+              <div class='textt name'>The Hummingbird Cafe</div>
+            </div>
+            <div>
+              <img class='circle' width='100' height='100' src="{% static 'Monosketch.png' %}" >
+              <div class='textt role texttt'>workshop vendor</div>
+              <div class='textt name'>Monosketch</div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+            <div>
+              <div class='staylab'>
+                <img class='circle' src="{% static 'stay.png' %}" >
+              </div>
+              <div class='textt texttt role'>website vendor</div>
+              <div class='textt  name'>Staylab</div>
+            </div>
+          </div>
+        </div>
+        <a id='menuu1'class="nav-link intro pill" data-toggle="tab" href="#menu1" onclick="expand(1)">
+          <img id='plus' class='full-leaf expand' alt='leaf' src="{% static 'expand.png' %}" width='24' height='24' />
+          <img class='full-leaf collapse' alt='leaf' src="{% static 'collapse.png' %}" width='24' height='24' />
+          <span class='impact-color'>exhibition</span></br>
+          <span class='green-color'>triễn lãm</span>
+        </a>
+        <div id="menu1" class="container"><br>
+          <div class='title'>Nov 21 – Dec 1, 2019</div>
+          <div>
+            <div class='col1'>
+              <div class='map-responsive'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.395138260709!2d106.70496095033376!3d10.781017992280738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f05ed105d67%3A0x1122b5cc2ec54b4a!2sThe%20Hummingbird%20Cafe!5e0!3m2!1sen!2s!4v1572163709955!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class='col2'>
+              <div class='info'>
+                <div class='location-time'>
+                  <div class='time'>
+                    <span class='label'>⏳ Thời gian triễn lãm:</span>
+                    <span class='content marginLeft'>21/11/2019 – 1/12/2019</span>
+                  </div>
+                  <div class='location time'>
+                    <span class='label'>📍 Địa điểm:</span>
+                    <span class='content marginLeft'>The Hummingbird Cafe</span>
+                    <span class='marginLeft' style="color: #9A9E9C">5H Ton Duc Thang St., Ben Nghe,</span>
+                    <br/>
+                    <span class='marginLeft' style="color: #9A9E9C">District 1, HCMC</span>
+                  </div>
+                </div>
+                <div class='social-network'>
+                  <div class='messenger'>
+                    <img src="{% static 'messenger.png' %}" >
+                    <div style='width: 100%;'>Share in Messenger</div>
+                  </div>
+                  <div class='fb'>
+                    <img src="{% static 'fb.png' %}" >
+                    <div style="width: 100%;">Share in Facebook</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class='content'>
+            <div class='col1'>
+              <div class='exhibition'>For the exhibition, all the works are sorted into 4 categories: Light, Soil, Air, and Water. These are four foundational elements that are crucial to the life of a plant. The works in each theme bare the same characteristics:</br>☀️️ Light: love, peace, and warmth</br>🌫️ Soil: life, reincarnation, and hope</br>💨 Air: imagination and utopia</br>💦 Water: Mystery, sorrow, and purity. All the plants that are grown by artists during the project will also be displayed alongside the artworks.</div>
+            </div>
+            <div class='col2'>
+              <div class='exhibition_vie marginLeft'>Các tác phẩm tham gia dự án được chia theo 4 chủ đề lần lượt là: Ánh Sáng, Đất, Không Khí, và Nước. Đây cũng là 4 yếu tố quan trọng trong việc trồng cây. Các tác phẩm trong mỗi chủ đề sẽ chia sẻ những điểm tương đồng sau:</br>☀️️ Ánh Sáng: tình yêu, sự yên bình, và sự ấm áp.</br>🌫️ Đất: Sự sống, sự tái sinh, và hy vọng.</br>💨 Không Khí: trí tưởng tượng và utopia.</br>💦 Nước: sự bí ẩn, nỗi buồn, và tính thuần khiết. Điều đặc biệt là những cây được các thành viên chọn tham gia dự án sẽ được trưng bày cùng tác phẩm tròn triển lãm.</div>
+            </div>
+          </div> -->
+        </div>
+        <a id='menuu2' class="nav-link intro pill active" data-toggle="tab" href="#home" onclick="expand(2)">
+          <img id='plus' class='full-leaf expand' alt='leaf' src="{% static 'expand.png' %}" width='24' height='24' />
+          <img  class='full-leaf collapse' alt='leaf' src="{% static 'collapse.png' %}" width='24' height='24' />
+          <span class='impact-color'>showcase</span></br>
+          <span class='green-color'>các tác phẩm</span>
+        </a>
+        <div id="menu2" class="container tab-pane active"><br>
+          <div class='categories'>
+            <a id='cate1' href="?category=all#home" onclick="select(1)">
+              <span class='eng'>🗂️All</span>
+                |
+              <span class='vie'>Tất cả</span>
+            </a>
+            <a id='cate2' href="?category=soil#home" onclick="select(2)">
+              <span class='eng'>🌫️Soil</span>
+                |
+              <span class='vie'>Đất</span>
+            </a>
+            <a id='cate3' href="?category=water#home" onclick="select(3)">
+              <span class='eng'>💦Water</span>
+                |
+              <span class='vie'>Nước</span>
+            </a>
+            <a id='cate4' href="?category=air#home" onclick="select(4)">
+              <span class='eng'>💨Air</span>
+                |
+              <span class='vie'>Không khí</span>
+            </a>
+            <a id='cate5' href="?category=light#home" onclick="select(5)">
+              <span class='eng'>☀️️Light</span>
+                |
+              <span class='vie'>Ánh sáng</span>
+            </a>
+          </div>
+          <div class='row'>
+            <div class='col-sm-4 col-6'>
+              {% for picture in pictures1_mobile %}
+                <div class='picture'>
+                  <img width="152" alt={{picture.description}} src={{picture.url}} />
+                  <div class='author'>{{picture.author}}</div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class='col-sm-4 col-6'>
+              {% for picture in pictures2_mobile %}
+                <div class='picture'>
+                  <img width="152"alt={{picture.description}} src={{picture.url}} />
+                  <div class='author'>{{picture.author}}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MOBILE -->
   </div>
 </body>
 </html>
+<script>
+  $(document).ready(
+    function(){
+
+    }
+  )
+  const url_string = window.location.href;
+  var url = new URL(url_string);
+  var c = url.searchParams.get("category");
+  var xx = document.getElementById(c);
+  if (xx == null) {
+    var xx = document.getElementById('all');
+  }
+  console.log(xx);
+  xx.classList.add('selected');
+  // function select(n) {
+  //   var element = document.getElementById("cate" + n);
+  //   console.log(element);
+  //   element.classList.toggle("selected");
+  // }
+  function expand(n) {
+    const ids = [0, 1, 2];
+    // close others
+    var i = 0;
+    for (i = 0; i < ids.length; i++) {
+      if (ids[i] !== n) {
+        console.log(ids[i])
+        var x = document.getElementById('menu' + ids[i]);
+        x.style.display = "none";
+      }
+    }
+    const elementId = 'menu' + n;
+    var cc = document.getElementById(elementId);
+    var vv = document.getElementsByClassName('expand')[n];
+    var tt = document.getElementsByClassName('collapse')[n];
+    // var xx = document.getElementById('menuu' + n)
+    if (cc.style.display == 'block') {
+      cc.style.display = "none";
+      vv.style.display = "block";
+      tt.style.display = "none";
+      // xx.classList.remove('green-border');
+    } else {
+      // xx.className += (' green-border');
+      // xx.classList.add('green-border');
+      cc.style.display = "block";
+      tt.style.display = "block";
+      vv.style.display = "none";
+    }
+  };
+</script>

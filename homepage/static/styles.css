@@ -132,6 +132,7 @@ body {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 48px;
+  margin-top: 48px;
 }
 
 .categories > a {
@@ -143,13 +144,17 @@ body {
   letter-spacing: 0.08em;
   padding: 11px 24px;
   background-color: #F7F9F3;
-  border: 1px solid #3F9C67;
+  border: 1px solid #F7F9F3;
   box-sizing: border-box;
   border-radius: 24px;
   margin-right: 40px;
   cursor: pointer;
   text-decoration: none;
 
+}
+
+.selected {
+  border: 1px solid #3F9C67 !important;
 }
 
 .categories > a:hover {
@@ -315,4 +320,157 @@ body {
   background-color: #022B21;
   width: 100px;
   height: 100px;
+}
+
+.introduction {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #E6E9E7;
+  padding: 20px 0px 70px 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+@media only screen and (min-width: 481px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .intro-block {
+    flex-direction: column-reverse;
+  }
+
+  .center {
+    padding-top: 48px;
+    padding-bottom: 28px;
+  }
+
+  .text {
+    margin: 0px 25px 40px 24px;
+  }
+
+  .introduction {
+    padding: 20px 0px 10px 0px;
+  }
+
+  .block-content {
+    margin: 0px;
+  }
+
+  .categories {
+    display: flex;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .categories > a {
+    margin: 16px 16px 0px 0px;
+  }
+
+  .pill {
+    text-align: left;
+  }
+
+  .nav {
+    display: none !important;
+  }
+
+  .full-leaf {
+    display: block;
+    float: right;
+    margin-top: 14px;
+  }
+
+  #menu1, #menu0, #menu2 {
+    display: none;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .circle {
+    display: block;
+    margin: auto;
+  }
+
+  .staylab {
+    margin: auto;
+  }
+
+  .textt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+  }
+
+  .texttt {
+    margin-top: 15px;
+  }
+
+  .sponsor {
+    margin-top: 36px;
+  }
+
+  #menu1 .title {
+    font-size: 20px;
+  }
+
+  .green-border {
+    border-bottom-color: #3F9C67 !important;
+    border: 2px solid transparent
+  }
+
+  .pill {
+    border: 1px solid #E6E9E7;
+  }
+
+  .info {
+    margin-top: 24px;
+  }
+
+  .fb {
+    margin-top: 24px;
+    margin-left: auto;
+  }
+
+  .social-network {
+    display: block;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .leaf, .leaf1 {
+    display: none;
+  }
+
+  .fb div, .messenger div {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+  }
+
+  .messenger {
+    display: flex;
+    text-align: center;
+  }
+
+  .fb {
+    display: flex;
+    text-align: center;
+  }
 }
