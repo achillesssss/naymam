@@ -366,6 +366,7 @@ body {
     display: flex;
     margin-bottom: 48px;
     flex-wrap: wrap;
+    margin-top: 0px;
   }
 
   .categories > a {
@@ -386,7 +387,7 @@ body {
     margin-top: 14px;
   }
 
-  #menu1, #menu0, #menu2 {
+  #menu1, #menu0 {
     display: none;
   }
 

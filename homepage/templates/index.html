@@ -51,14 +51,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link intro pill" data-toggle="tab" href="#menu1">
+          <a class="nav-link intro pill" data-toggle="tab" href="#menuu1">
             <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
             <span class='impact-color'>exhibition</span></br>
             <span class='green-color'>triễn lãm</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link intro pill" data-toggle="tab" href="#menu2">
+          <a class="nav-link intro pill" data-toggle="tab" href="#menuu2">
             <img class='full-leaf' alt='leaf' src="{% static 'full_leaf.png' %}" width='48' height='34' />
             <span class='impact-color'>about us</span></br>
             <span class='green-color'>giới thiệu</span>
@@ -121,7 +121,7 @@
               </div>
             </div>
           </div>
-          <div id="menu1" class="container tab-pane fade"><br>
+          <div id="menuu1" class="container tab-pane fade"><br>
             <div class='title'>Nov 21 – Dec 1, 2019</div>
             <div class='content'>
               <div class='col1'>
@@ -166,7 +166,7 @@
               </div>
             </div>
           </div>
-          <div id="menu2" class="container tab-pane fade"><br>
+          <div id="menuu2" class="container tab-pane fade"><br>
             <div class='content'>
               <div class='col1'>
                 <div class='exhibition'>Each artist who participates in the project, besides creating an artwork, will also commit to grow a plant. To many participants, this can be their first time experience. Each artist is committed to planting during the process of creating their work and the preparation of the project. This means that if his/her plant dies, he/she will replace it with another one. The point of this is to encourage participants not to give up on planting and to acknowledge that growing a plant is a learning-by-experience process.</div>
@@ -257,7 +257,7 @@
           <span class='impact-color'>exhibition</span></br>
           <span class='green-color'>triễn lãm</span>
         </a>
-        <div id="menu1" class="container"><br>
+        <div id="menu1" class="container">
           <div class='title'>Nov 21 – Dec 1, 2019</div>
           <div>
             <div class='col1'>
@@ -308,7 +308,7 @@
           <span class='impact-color'>showcase</span></br>
           <span class='green-color'>các tác phẩm</span>
         </a>
-        <div id="menu2" class="container tab-pane active"><br>
+        <div id="menu2" class="container" style='display: block'>
           <div class='categories'>
             <a id='cate1' href="?category=all#home" onclick="select(1)">
               <span class='eng'>🗂️All</span>
@@ -373,7 +373,7 @@
   if (xx == null) {
     var xx = document.getElementById('all');
   }
-  console.log(xx);
+  // console.log(xx);
   xx.classList.add('selected');
   // function select(n) {
   //   var element = document.getElementById("cate" + n);
@@ -386,7 +386,6 @@
     var i = 0;
     for (i = 0; i < ids.length; i++) {
       if (ids[i] !== n) {
-        console.log(ids[i])
         var x = document.getElementById('menu' + ids[i]);
         x.style.display = "none";
       }
@@ -395,18 +394,14 @@
     var cc = document.getElementById(elementId);
     var vv = document.getElementsByClassName('expand')[n];
     var tt = document.getElementsByClassName('collapse')[n];
-    // var xx = document.getElementById('menuu' + n)
     if (cc.style.display == 'block') {
       cc.style.display = "none";
       vv.style.display = "block";
       tt.style.display = "none";
-      // xx.classList.remove('green-border');
     } else {
-      // xx.className += (' green-border');
-      // xx.classList.add('green-border');
       cc.style.display = "block";
-      tt.style.display = "block";
       vv.style.display = "none";
+      tt.style.display = "block";
     }
   };
 </script>
