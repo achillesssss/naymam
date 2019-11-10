@@ -23,13 +23,13 @@
     <div class="leaf">
       <img alt="leaf" src="{% static 'leaf.png' %}" />
     </div>
-    <div class='intro'>
+    <div class='intro left-right'>
       a little project contributing</br>the green fields into our daily life,</br>and bringing a big inspiration to people.
     </div>
     <div class="leaf1">
       <img alt="leaf" src="{% static 'leaf1.png' %}" />
     </div>
-    <div class='sub-intro'>
+    <div class='sub-intro left-right'>
       một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
     </div>
     <div class="block-1" style="background-image: url('/static/texture.png')">
@@ -76,7 +76,7 @@
                 <a id='all' href="?category=all#home" onclick="select(1)">
                   <span class='eng'>🗂️All</span>
                     |
-                  <span class='vie'>Tất cả</span>
+                  <span class='vie'>Tất cả</span>
                 </a>
                 <a id='soil' href="?category=soil#home"onclick="select(2)">
                   <span class='eng'>🌫️Soil</span>
@@ -308,8 +308,8 @@
           </div> -->
         </div>
         <a id='menuu2' class="nav-link intro pill active" data-toggle="tab" href="#home" onclick="expand(2)">
-          <img id='plus' class='full-leaf expand' alt='leaf' src="{% static 'expand.png' %}" width='24' height='24' />
-          <img  class='full-leaf collapse' alt='leaf' src="{% static 'collapse.png' %}" width='24' height='24' />
+          <img id='plusss' class='full-leaf expand' alt='leaf' src="{% static 'expand.png' %}" width='24' height='24' />
+          <img id='minus' class='full-leaf collapse' alt='leaf' src="{% static 'collapse.png' %}" width='24' height='24' />
           <span class='impact-color'>showcase</span></br>
           <span class='green-color'>các tác phẩm</span>
         </a>
@@ -376,19 +376,31 @@
     element.parentNode.removeChild(element);
   }
 
+  var minus = document.getElementById('minus');
+  var plus = document.getElementById('plusss');
+  minus.style.display = 'block';
+  plus.style.display = 'none';
+
+  var menuu2 = document.getElementById('menuu2');
+  menuu2.classList.add('green-border-bottom');
+
   const url_string = window.location.href;
   var url = new URL(url_string);
   var c = url.searchParams.get("category");
+
   var xx = document.getElementById(c);
   if (xx == null) {
     var xx = document.getElementById('all');
+  } else {
+
   }
-  console.log(xx);
   xx.classList.add('selected');
 
 
   setTimeout(function(){
-    console.log('asdf')
+    // const url_string = window.location.href;
+    // var url = new URL(url_string);
+    // var c = url.searchParams.get("category");
     var header = document.getElementsByClassName('header')[0];
     var element = document.getElementsByClassName('loading')[0];
     header.style.display = 'block';
@@ -404,12 +416,30 @@
       if (ids[i] !== n) {
         var x = document.getElementById('menu' + ids[i]);
         x.style.display = "none";
+        var y = document.getElementById('menuu' + ids[i]);
+        y.classList.remove('green-border-bottom');
       }
     }
     const elementId = 'menu' + n;
+
+    var z = document.getElementById('menuu' + n);
+    if (z.classList.contains('green-border-bottom')) {
+      z.classList.remove('green-border-bottom');
+    } else {
+      z.classList.add('green-border-bottom');
+    }
+
     var cc = document.getElementById(elementId);
     var vv = document.getElementsByClassName('expand')[n];
     var tt = document.getElementsByClassName('collapse')[n];
+
+    for (i = 0; i < ids.length; i++) {
+      if (ids[i] !== n) {
+        document.getElementsByClassName('expand')[ids[i]].style.display = 'block';
+        document.getElementsByClassName('collapse')[ids[i]].style.display = 'none';
+      }
+    }
+
     if (cc.style.display == 'block') {
       cc.style.display = "none";
       vv.style.display = "block";
