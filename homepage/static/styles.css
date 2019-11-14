@@ -46,9 +46,9 @@ body {
 }
 
 .text {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
@@ -80,8 +80,8 @@ body {
 
 .author {
   margin-top: 24px;
-  font-family: Montserrat;
-  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.08em;
   color: #022B21
@@ -136,9 +136,9 @@ body {
 }
 
 .categories > a {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
@@ -184,24 +184,37 @@ body {
   color: #022B21;
 }
 
+.title {
+  font-family: Courier;
+  font-size: 36px;
+  line-height: 32px;
+  /* identical to box height, or 89% */
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+  margin-top: 48px;
+  /* nay-mam/impact */
+  color: #022B21;
+}
+
 .exhibition {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
   color: #022B21;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 56px;
 }
 
 .exhibition_vie {
   margin-top: 56px;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
   color: #3F9C67;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content {
@@ -234,9 +247,9 @@ body {
 }
 
 .time > span {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
@@ -267,6 +280,7 @@ body {
   background: #4267B2;
   border-radius: 24px;
   cursor: pointer;
+  margin-top: 24px;
 }
 
 .social-network {
@@ -274,17 +288,13 @@ body {
 }
 
 .fb span, .messenger span {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 26px;
   letter-spacing: 0.08em;
   color: #FFFFFF;
-}
-
-.fb {
-  margin-left: 24px;
 }
 
 .marginLeft {
@@ -320,6 +330,7 @@ body {
   background-color: #022B21;
   width: 100px;
   height: 100px;
+  margin:auto;
 }
 
 .introduction {
@@ -421,9 +432,9 @@ body {
   }
 
   .textt {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 26px;
     letter-spacing: 0.08em;
@@ -474,9 +485,9 @@ body {
   }
 
   .fb div, .messenger div {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 13px;
     line-height: 26px;
     letter-spacing: 0.08em;
