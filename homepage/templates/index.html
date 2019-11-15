@@ -353,7 +353,8 @@
             <div class='col-sm-4 col-6'>
               {% for picture in pictures1_mobile %}
                 <div class='picture'>
-                  <img width="152" alt={{picture.description}} src={{picture.url}} />
+                  <!-- <img width="152" alt={{picture.description}} src={{picture.url}} /> -->
+                  <a data-fancybox="gallery" href={{picture.url}}><img width="152" src="{{picture.url}}"></a>
                   <div class='author'>{{picture.author}}</div>
                 </div>
               {% endfor %}
@@ -361,7 +362,8 @@
             <div class='col-sm-4 col-6'>
               {% for picture in pictures2_mobile %}
                 <div class='picture'>
-                  <img width="152"alt={{picture.description}} src={{picture.url}} />
+                  <!-- <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a> -->
+                  <a data-fancybox="gallery" href={{picture.url}}><img width="152" src="{{picture.url}}"></a>
                   <div class='author'>{{picture.author}}</div>
                 </div>
               {% endfor %}
