@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- fancybox -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </head>
 <body>
   <div class='loading' style="margin: auto; background-image: url('/static/background.png')">
@@ -104,7 +108,8 @@
               <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures1 %}
                   <div class='picture'>
-                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
+                    <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
                     <div class='author'>{{picture.author}}</div>
                   </div>
                 {% endfor %}
@@ -112,7 +117,8 @@
               <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures2 %}
                   <div class='picture'>
-                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
+                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
                     <div class='author'>{{picture.author}}</div>
                   </div>
                 {% endfor %}
@@ -120,7 +126,8 @@
               <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures3 %}
                   <div class='picture'>
-                    <img width="256"alt={{picture.description}} src={{picture.url}} />
+                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
+                    <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
                     <div class='author'>{{picture.author}}</div>
                   </div>
                 {% endfor %}
