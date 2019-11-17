@@ -118,14 +118,15 @@
                     <!-- MODAL -->
                     <div style="display: none;margin-left: 160px; margin-right: 160px" id="trueModal{{item.id}}">
                       <div class='navigation'>
-                        <div class='prev' onclick="prevShowCase('{{item.count}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                        <div class='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
                           <div class='textt'style="color: #9A9E9C" >Previous</div>
                         </div>
-                        <div onclick="nextShowCase('{{item.count}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
                           <img width="40" src="{% static 'next.svg' %}">
                           <div class='textt' style="color: #9A9E9C">Next</div>
                         </div>
+                        <button style="position: fixed; color: #F7F9F3; top: 0" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
                       </div>
                       <div class='first-part'>
                         <div class='author-name'>{{item.showcase.author.name}}</div>
@@ -158,14 +159,15 @@
                     <!-- MODAL -->
                     <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
                     <div class='navigation'>
-                        <div clas='prev' onclick="prevShowCase('{{item.count}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                        <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
                           <div class='textt'style="color: #9A9E9C" >Previous</div>
                         </div>
-                        <div onclick="nextShowCase('{{item.count}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
                           <img width="40" src="{% static 'next.svg' %}">
                           <div class='textt' style="color: #9A9E9C">Next</div>
                         </div>
+                        <button style="position: fixed; color: #F7F9F3; top: 0" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
                       </div>
                       <div class='first-part'>
                         <div class='author-name'>{{item.showcase.author.name}}</div>
@@ -198,15 +200,16 @@
                     <!-- MODAL -->
                     <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
                     <div class='navigation'>
-                        <div clas='prev' onclick="prevShowCase('{{item.count}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
-                          <img width="40" src="{% static 'prev.svg' %}">
-                          <div class='textt'style="color: #9A9E9C" >Previous</div>
-                        </div>
-                        <div onclick="nextShowCase('{{item.count}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
-                          <img width="40" src="{% static 'next.svg' %}">
-                          <div class='textt' style="color: #9A9E9C">Next</div>
-                        </div>
+                      <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                        <img width="40" src="{% static 'prev.svg' %}">
+                        <div class='textt'style="color: #9A9E9C" >Previous</div>
                       </div>
+                      <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                        <img width="40" src="{% static 'next.svg' %}">
+                        <div class='textt' style="color: #9A9E9C">Next</div>
+                      </div>
+                      <button style="position: fixed; color: #F7F9F3; top: 0" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+                    </div>
                       <div class='first-part'>
                         <div class='author-name'>{{item.showcase.author.name}}</div>
                         <div class='popup-showcase'>
@@ -536,24 +539,24 @@
   }, 100);
 
   currentShowCase = url_string.indexOf('?albums=');
-  var curr = url_string.substring(pos + '?albums='.length, url.length);
-  function nextShowCase(a) {
+  // var curr = url_string.substring(pos + '?albums='.length, url.length);
+  function nextShowCase(a, cur) {
     $.fancybox.close();
-    var next = parseInt(curr) + 1;
+    var next = parseInt(cur) + 1;
     if (next == parseInt(a)) {
       next = 1
     }
-    curr = next;
+    // curr = next;
     $.fancybox.open({src: '#trueModal' + next});
   }
 
-  function prevShowCase(a) {
+  function prevShowCase(a, cur) {
     $.fancybox.close();
-    var next = parseInt(curr) - 1;
+    var next = parseInt(cur) - 1;
     if (next == 0) {
       next = parseInt(a)
     }
-    curr = next;
+    // curr = next;
     $.fancybox.open({src: '#trueModal' + next});
   }
 

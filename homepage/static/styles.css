@@ -587,3 +587,7 @@ body {
 .fancybox-slide {
   padding: 20px !important;
 }
+
+.fancybox-content > .fancybox-close-small {
+  display: none;
+}
