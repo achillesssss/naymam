@@ -583,3 +583,7 @@ body {
 .first-part {
   padding-bottom: 80px;
 }
+
+.fancybox-slide {
+  padding: 20px !important;
+}
