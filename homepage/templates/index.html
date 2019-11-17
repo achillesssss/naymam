@@ -5,6 +5,11 @@
   <link rel="stylesheet" href="{% static 'styles.css' %}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+  <!-- End bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -108,9 +113,30 @@
               <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures1 %}
                   <div class='picture'>
-                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
-                    <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
+                    <img style="cursor: pointer;" data-fancybox data-src="#trueModal1" href="javascript:;" width="256" src="{{picture.url}}">
                     <div class='author'>{{picture.author}}</div>
+                    <!-- MODAL -->
+                    <div style="display: none;;" id="trueModal1">
+                      <div class='first-part'>
+                        <div class='author-name'>Nguyen Dao</div>
+                        <div class='popup-showcase'>
+                          <div class='authorr'>
+                            <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
+                              <div class='bio'>
+                                <div class="impact-color textt">Designer and maker 🐱-as-a-Service Always a learner</div>
+                                <div class="green-color textt" style="margin-top: 8px">www.google.com</div>
+                              </div>
+                          </div>
+                          <div class='showcase-intro textt'>
+                            Creative problem solving and clear decision-making are what separates good designers and managers from the best; the problem with anything that requires creative and critical thinking, however, is that it’s easy to get lost, lose focus, and fall into the trap of having useless, open-ended, unstructured discussions. Projects stall, teams lose momentum, and everything goes over-budget, causing many products and services to be released late and full of compromises, all because the team is so fatigued from working on endless, unprioritized problems.
+                          </div>
+                        </div>
+                      </div>
+                      <div class='photos'>
+
+                      </div>
+                    </div>
+                    <!-- END MODAL -->
                   </div>
                 {% endfor %}
               </div>
@@ -118,7 +144,6 @@
                 {% for picture in pictures2 %}
                   <div class='picture'>
                     <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
-                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
                     <div class='author'>{{picture.author}}</div>
                   </div>
                 {% endfor %}
@@ -126,7 +151,6 @@
               <div class='col-md-4 col-sm-6'>
                 {% for picture in pictures3 %}
                   <div class='picture'>
-                    <!-- <img width="256"alt={{picture.description}} src={{picture.url}} /> -->
                     <a data-fancybox="gallery" href={{picture.url}}><img width="256" src="{{picture.url}}"></a>
                     <div class='author'>{{picture.author}}</div>
                   </div>
@@ -353,9 +377,24 @@
             <div class='col-sm-4 col-6'>
               {% for picture in pictures1_mobile %}
                 <div class='picture'>
-                  <!-- <img width="152" alt={{picture.description}} src={{picture.url}} /> -->
-                  <a data-fancybox="gallery" href={{picture.url}}><img width="152" src="{{picture.url}}"></a>
+                  <img width="152" alt={{picture.description}} src={{picture.url}} />
+                  <!-- <a data-fancybox="gallery" href={{picture.url}}><img width="152" src="{{picture.url}}"></a> -->
                   <div class='author'>{{picture.author}}</div>
+                  <div class="fancybox-stage">
+                    <div class="fancybox-slide fancybox-slide--current fancybox-slide--image fancybox-slide--complete" style="padding-bottom: 98px;">
+                      <div class="fancybox-content" style="transform: translate(9px, 44px); width: 396px; height: 594px;">
+                        <img class="fancybox-image" src="{{picture.url}}" style="display: none;">
+                        <img class="fancybox-image" src="{{picture.url}}">
+                      </div>
+                    </div>
+                    <div class="fancybox-slide fancybox-slide--image" style="padding-bottom: 98px;">
+                      <div class="fancybox-content" style="transform: translate(0px, 202px); width: 414px; height: 276.108px;">
+                        <img class="fancybox-image" src="https://source.unsplash.com/ty4X72BSsXY/416x278" style="display: none;">
+                        <img class="fancybox-image" src="https://source.unsplash.com/ty4X72BSsXY/1279x853">
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               {% endfor %}
             </div>
@@ -406,16 +445,21 @@
   }
   xx.classList.add('selected');
 
+  // Showcase modal
+  const pos = url_string.indexOf('?albums=');
+  if(pos != -1) {
+    const albumId = url_string.substring(pos + '?albums='.length, url.length);
+    $.fancybox.open({src: '#trueModal' + albumId});
+  }
+  // End showcase modal
+
 
   setTimeout(function(){
-    // const url_string = window.location.href;
-    // var url = new URL(url_string);
-    // var c = url.searchParams.get("category");
     var header = document.getElementsByClassName('header')[0];
     var element = document.getElementsByClassName('loading')[0];
     header.style.display = 'block';
     element.style.display = 'none';
-  }, 1000);
+  }, 100);
 
 
   function expand(n) {

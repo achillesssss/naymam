@@ -451,15 +451,6 @@ body {
     margin: auto;
   }
 
-  .textt {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 26px;
-    letter-spacing: 0.08em;
-  }
-
   .texttt {
     margin-top: 15px;
   }
@@ -545,4 +536,50 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.popup-showcase {
+  display: flex;
+  margin-top: 24px;
+}
+
+.author-name {
+  font-family: Courier;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  letter-spacing: 0.08em;
+  /* nay-mam/impact */
+  color: #022B21;
+  border-bottom: 1px solid #E6E9E7;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorr .avatar {
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.authorr {
+  display: flex;
+  margin-right: 160px;
+}
+
+.textt {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 0.08em;
+}
+
+.first-part {
+  padding-bottom: 80px;
 }
