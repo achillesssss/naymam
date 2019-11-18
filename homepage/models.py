@@ -27,8 +27,16 @@ class Album(models.Model):
   description = models.TextField(blank=True, null=True)
   author = models.ForeignKey('Author', on_delete=models.CASCADE)
 
+  def __unicode__(self):
+        return u'%s' % self.name
+
+
 class Author(models.Model):
   name = models.TextField(blank=True, null=True)
   description = models.TextField(blank=True, null=True)
   link = models.TextField(blank=True, null=True)
+
+  def __unicode__(self):
+        return u'%s' % self.name
+
 
