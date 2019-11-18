@@ -454,83 +454,97 @@
             <div class='col-sm-4 col-6'>
               {% for item in pictures1_mobile %}
               <div class='picture'>
-                  <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
-                  <div class='author'>{{item.picture.author}}</div>
-                  <!-- MODAL -->
-                  <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
-                  <div class='navigation'>
-                    <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
-                      <img width="40" src="{% static 'prev.svg' %}">
-                      <div class='textt'style="color: #9A9E9C" >Previous</div>
-                    </div>
-                    <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
-                      <img width="40" src="{% static 'next.svg' %}">
-                      <div class='textt' style="color: #9A9E9C">Next</div>
-                    </div>
-                    <button style="position: fixed; color: #F7F9F3; top: 0" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
-                  </div>
-                    <div class='first-part'>
-                      <div class='author-name'>{{item.showcase.author.name}}</div>
-                      <div class='popup-showcase'>
-                        <div class='authorr'>
-                          <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
-                            <div class='bio'>
-                              <div class="impact-color textt">{{item.showcase.author.description}}</div>
-                              <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
-                            </div>
-                        </div>
-                        <div class='showcase-intro textt'>{{item.showcase.description}}</div>
-                      </div>
-                    </div>
-                    <div class='photos'>
-                      {% for pic in item.showcase.pictures %}
-                        <img width="100%" src="{{pic.url}}" style="margin-bottom: 20px;">
-                      {% endfor %}
-                    </div>
-                  </div>
-                  <!-- END MODAL -->
+                <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="152" src="{{item.picture.url}}">
+                <div class='author'>{{item.picture.author}}</div>
+                <!-- MODAL -->
+                <div class='temp' style="display: none;" id="trueModal{{item.id}}">
+                <div class='navigation'>
+                  <button style="position: absolute; color: #3F9C67; top: 0; margin-top: 14px; margin-right: 14px;" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.5 5.72205e-06L24 22.5L22.5 24L0 1.50001L1.5 5.72205e-06Z" fill="#3F9C67"/>
+                      <path d="M24 1.5L1.5 24L0 22.5L22.5 0L24 1.5Z" fill="#3F9C67"/>
+                    </svg>
+                  </button>
                 </div>
+                <div class='first-part'>
+                  <div class='author-name'>{{item.showcase.author.name}}</div>
+                  <div class='popup-showcase'>
+                    <div class='authorr'>
+                      <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
+                        <div class='bio'>
+                          <div class="impact-color textt">{{item.showcase.author.description}}</div>
+                          <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
+                        </div>
+                    </div>
+                    <div class='showcase-intro textt'>{{item.showcase.description}}</div>
+                  </div>
+                </div>
+                <div class='photos'>
+                  {% for pic in item.showcase.pictures %}
+                    <img width="100%" src="{{pic.url}}" style="margin-bottom: 24px;">
+                  {% endfor %}
+                </div>
+                <div class='nextprev'>
+                  <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')">
+                    <img width="40" src="{% static 'prev.svg' %}">
+                    <div class='textt'style="color: #9A9E9C; margin-top: 8px" >Previous</div>
+                  </div>
+                  <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next'>
+                    <img width="40" src="{% static 'next.svg' %}">
+                    <div class='textt' style="color: #9A9E9C; margin-top: 8px">Next</div>
+                  </div>
+                </div>
+              </div>
+            <!-- END MODAL -->
+            </div>
               {% endfor %}
             </div>
             <div class='col-sm-4 col-6'>
               {% for item in pictures2_mobile %}
               <div class='picture'>
-                  <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
+                  <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="152" src="{{item.picture.url}}">
                   <div class='author'>{{item.picture.author}}</div>
                   <!-- MODAL -->
-                  <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
+                  <div class='temp' style="display: none;" id="trueModal{{item.id}}">
                   <div class='navigation'>
-                    <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
-                      <img width="40" src="{% static 'prev.svg' %}">
-                      <div class='textt'style="color: #9A9E9C" >Previous</div>
-                    </div>
-                    <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
-                      <img width="40" src="{% static 'next.svg' %}">
-                      <div class='textt' style="color: #9A9E9C">Next</div>
-                    </div>
-                    <button style="position: fixed; color: #F7F9F3; top: 0" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+                    <button style="position: absolute; color: #3F9C67; top: 0; margin-top: 14px; margin-right: 14px;" type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 5.72205e-06L24 22.5L22.5 24L0 1.50001L1.5 5.72205e-06Z" fill="#3F9C67"/>
+                        <path d="M24 1.5L1.5 24L0 22.5L22.5 0L24 1.5Z" fill="#3F9C67"/>
+                      </svg>
+                    </button>
                   </div>
-                    <div class='first-part'>
-                      <div class='author-name'>{{item.showcase.author.name}}</div>
-                      <div class='popup-showcase'>
-                        <div class='authorr'>
-                          <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
-                            <div class='bio'>
-                              <div class="impact-color textt">{{item.showcase.author.description}}</div>
-                              <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
-                            </div>
-                        </div>
-                        <div class='showcase-intro textt'>{{item.showcase.description}}</div>
+                  <div class='first-part'>
+                    <div class='author-name'>{{item.showcase.author.name}}</div>
+                    <div class='popup-showcase'>
+                      <div class='authorr'>
+                        <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
+                          <div class='bio'>
+                            <div class="impact-color textt">{{item.showcase.author.description}}</div>
+                            <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
+                          </div>
                       </div>
-                    </div>
-                    <div class='photos'>
-                      {% for pic in item.showcase.pictures %}
-                        <img width="100%" src="{{pic.url}}" style="margin-bottom: 20px;">
-                      {% endfor %}
+                      <div class='showcase-intro textt'>{{item.showcase.description}}</div>
                     </div>
                   </div>
-                  <!-- END MODAL -->
+                  <div class='photos'>
+                    {% for pic in item.showcase.pictures %}
+                      <img width="100%" src="{{pic.url}}" style="margin-bottom: 24px;">
+                    {% endfor %}
+                  </div>
+                  <div class='nextprev'>
+                    <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')">
+                      <img width="40" src="{% static 'prev.svg' %}">
+                      <div class='textt'style="color: #9A9E9C; margin-top: 8px" >Previous</div>
+                    </div>
+                    <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next'>
+                      <img width="40" src="{% static 'next.svg' %}">
+                      <div class='textt' style="color: #9A9E9C; margin-top: 8px">Next</div>
+                    </div>
+                  </div>
                 </div>
+              <!-- END MODAL -->
+              </div>
               {% endfor %}
             </div>
           </div>
