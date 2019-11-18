@@ -116,13 +116,13 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none;margin-left: 160px; margin-right: 160px" id="trueModal{{item.id}}">
+                    <div style="display: none; margin-left: 7%; margin-right: 7%" id="trueModal{{item.id}}">
                       <div class='navigation'>
-                        <div class='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                        <div class='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
                           <div class='textt'style="color: #9A9E9C" >Previous</div>
                         </div>
-                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
                           <img width="40" src="{% static 'next.svg' %}">
                           <div class='textt' style="color: #9A9E9C">Next</div>
                         </div>
@@ -134,8 +134,8 @@
                           <div class='authorr'>
                             <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
                               <div class='bio'>
-                                <div class="impact-color textt">{{item.showcase.author.description}}</div>
-                                <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
+                                <div class="impact-color textt des">{{item.showcase.author.description}}</div>
+                                <div class="green-color textt des" style="margin-top: 8px">{{item.showcase.author.link}}</div>
                               </div>
                           </div>
                           <div class='showcase-intro textt'>{{item.showcase.description}}</div>
@@ -157,13 +157,13 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
+                    <div style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
                     <div class='navigation'>
-                        <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                        <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
                           <div class='textt'style="color: #9A9E9C" >Previous</div>
                         </div>
-                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                        <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
                           <img width="40" src="{% static 'next.svg' %}">
                           <div class='textt' style="color: #9A9E9C">Next</div>
                         </div>
@@ -175,8 +175,8 @@
                           <div class='authorr'>
                             <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
                               <div class='bio'>
-                                <div class="impact-color textt">{{item.showcase.author.description}}</div>
-                                <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
+                                <div class="impact-color textt des">{{item.showcase.author.description}}</div>
+                                <div class="green-color textt des" style="margin-top: 8px">{{item.showcase.author.link}}</div>
                               </div>
                           </div>
                           <div class='showcase-intro textt'>{{item.showcase.description}}</div>
@@ -198,13 +198,13 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none;margin-left: 160px; margin-right: 160px;" id="trueModal{{item.id}}">
+                    <div style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
                     <div class='navigation'>
-                      <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
+                      <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                         <img width="40" src="{% static 'prev.svg' %}">
                         <div class='textt'style="color: #9A9E9C" >Previous</div>
                       </div>
-                      <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
+                      <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next' style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; right: 20px;bottom: 0;">
                         <img width="40" src="{% static 'next.svg' %}">
                         <div class='textt' style="color: #9A9E9C">Next</div>
                       </div>
@@ -216,8 +216,8 @@
                           <div class='authorr'>
                             <img class='avatar' src="{% static 'stay.svg' %}" width="56" height="56"/>
                               <div class='bio'>
-                                <div class="impact-color textt">{{item.showcase.author.description}}</div>
-                                <div class="green-color textt" style="margin-top: 8px">{{item.showcase.author.link}}</div>
+                                <div class="impact-color textt des">{{item.showcase.author.description}}</div>
+                                <div class="green-color textt des" style="margin-top: 8px">{{item.showcase.author.link}}</div>
                               </div>
                           </div>
                           <div class='showcase-intro textt'>{{item.showcase.description}}</div>
@@ -486,12 +486,12 @@
                 </div>
                 <div class='nextprev'>
                   <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')">
-                    <img width="40" src="{% static 'prev.svg' %}">
-                    <div class='textt'style="color: #9A9E9C; margin-top: 8px" >Previous</div>
+                    <img style="display: block; margin: auto" width="40" src="{% static 'prev.svg' %}">
+                    <div class='textt'style="text-align: center; color: #9A9E9C; margin-top: 8px" >Previous</div>
                   </div>
                   <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next'>
-                    <img width="40" src="{% static 'next.svg' %}">
-                    <div class='textt' style="color: #9A9E9C; margin-top: 8px">Next</div>
+                    <img style="display: block; margin: auto" width="40" src="{% static 'next.svg' %}">
+                    <div class='textt' style="text-align: center; color: #9A9E9C; margin-top: 8px">Next</div>
                   </div>
                 </div>
               </div>
@@ -534,12 +534,12 @@
                   </div>
                   <div class='nextprev'>
                     <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')">
-                      <img width="40" src="{% static 'prev.svg' %}">
-                      <div class='textt'style="color: #9A9E9C; margin-top: 8px" >Previous</div>
+                      <img width="40" style="display: block; margin: auto"  src="{% static 'prev.svg' %}">
+                      <div class='textt'style="text-align: center; color: #9A9E9C; margin-top: 8px" >Previous</div>
                     </div>
                     <div onclick="nextShowCase('{{item.count}}', '{{item.id}}')" class='next'>
-                      <img width="40" src="{% static 'next.svg' %}">
-                      <div class='textt' style="color: #9A9E9C; margin-top: 8px">Next</div>
+                      <img width="40" style="display: block; margin: auto" src="{% static 'next.svg' %}">
+                      <div class='textt' style="text-align: center; color: #9A9E9C; margin-top: 8px">Next</div>
                     </div>
                   </div>
                 </div>
