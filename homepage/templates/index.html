@@ -43,7 +43,7 @@
       một dự án nho nhỏ góp phần</br>thêm mảng xanh vào cuộc sống hằng ngày</br>và mang lại nguồn cảm hứng to to cho mọi người.
     </div>
     <div class="block-1" style="background-image: url('/static/texture.svg')">
-      <div style="display: flex;" class='intro-block'>
+      <div class="modal-container" style="display: flex;" class='intro-block'>
         <div class='introduction'>
           <div class='text impact-color'>The project includes around 100 works by 88 artists with media ranging from illustration, graphic design to graphic novel and sculpture. By sharing the experience via visual works, we hope to encourage the public to engage more in growing plants. The ultimate goal of Nảy Mầm is to simply tell a story about our plant experience and hope that people can feel the joy that comes with growing a plant.</div>
           <div class='text green-color'>Dự án có sự tham gia của 88 nghệ sĩ với các tác phẩm bao gồm nhiều hình thức chất liệu. Bằng việc chia sẻ về trải nghiệm của các nghệ sĩ thông qua các tác phẩm tham gia, dự án mong muốn có thể góp phần khuyến khích cộng đồng làm quen với việc trồng cây. Không đặt ra cho mình một mục đích to lớn, chúng tôi chỉ muốn chia sẻ việc trồng cây của bản thân và hy vọng mọi người có thể cảm nhận được niềm vui đến từ việc chăm sóc một cái cây.</div>
@@ -116,7 +116,7 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none; margin-left: 7%; margin-right: 7%" id="trueModal{{item.id}}">
+                    <div class="modal-container" style="display: none; margin-left: 7%; margin-right: 7%" id="trueModal{{item.id}}">
                       <div class='navigation'>
                         <div class='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
@@ -157,7 +157,7 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
+                    <div class="modal-container" style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
                     <div class='navigation'>
                         <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                           <img width="40" src="{% static 'prev.svg' %}">
@@ -198,7 +198,7 @@
                     <img style="cursor: pointer;" data-fancybox data-src="#trueModal{{item.id}}" href="javascript:;" width="256" src="{{item.picture.url}}">
                     <div class='author'>{{item.picture.author}}</div>
                     <!-- MODAL -->
-                    <div style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
+                    <div class="modal-container" style="display: none;margin-left: 7%; margin-right: 7%;" id="trueModal{{item.id}}">
                     <div class='navigation'>
                       <div clas='prev' onclick="prevShowCase('{{item.count}}', '{{item.id}}')" style="text-align: center; margin-bottom: 20px; top: 50%; z-index: 100; position: fixed; left: 20px;bottom: 0;">
                         <img width="40" src="{% static 'prev.svg' %}">
@@ -312,7 +312,7 @@
                 <div class='text name'>The Hummingbird Cafe</div>
               </div>
             </div>
-            <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+            <div class="modal-container" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
               <div>
                 <div class='staylab'>
                   <img class='circle' width='100' height='100' src="{% static 'Monosketch.svg' %}" >
@@ -363,7 +363,7 @@
               <div class='textt name'>Monosketch</div>
             </div>
           </div>
-          <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+          <div class="modal-container" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
             <div>
               <div class='staylab'>
                 <img class='circle' src="{% static 'stay.svg' %}" >
