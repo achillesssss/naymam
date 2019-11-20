@@ -33,7 +33,7 @@ def index(request):
 
   if category:
     if category != 'all':
-      pictures = pictures.filter(category=category)
+      albums = albums.filter(category=category)
   picture_data1 = []
   picture_data2 = []
   picture_data3 = []
