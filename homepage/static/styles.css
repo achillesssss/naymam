@@ -2,6 +2,15 @@ body {
   margin: 0;
 }
 
+.fb > a {
+  color: #FFFFFF;
+}
+
+.fb > a:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .logo {
   margin-top: 32px;
   text-align: center;
