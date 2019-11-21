@@ -50,7 +50,7 @@
         </div>
         <div style="flex: 1; margin: auto">
           <div class='center'>
-            <img class='circle' src="{% static 'stay.svg' %}" >
+            <img class='circle' src="{% static 'naymam-circle.gif' %}" width='144' height='144' >
           </div>
         </div>
       </div>
@@ -82,33 +82,6 @@
       </ul>
       <div class="tab-content">
           <div id="home" class="container tab-pane active">
-            <div class='categories'>
-                <a id='all' href="?category=all#home" onclick="select(1)">
-                  <span class='eng'>🗂️All</span>
-                    |
-                  <span class='vie'>Tất cả</span>
-                </a>
-                <a id='soil' href="?category=soil#home"onclick="select(2)">
-                  <span class='eng'>🌫️Soil</span>
-                    |
-                  <span class='vie'>Đất</span>
-                </a>
-                <a id='water' href="?category=water#home"onclick="select(3)">
-                  <span class='eng'>💦Water</span>
-                    |
-                  <span class='vie'>Nước</span>
-                </a>
-                <a id='air' href="?category=air#home"onclick="select(4)">
-                  <span class='eng'>💨Air</span>
-                    |
-                  <span class='vie'>Không khí</span>
-                </a>
-                <a id='light' href="?category=light#home"onclick="select(5)">
-                  <span class='eng'>☀️️Light</span>
-                    |
-                  <span class='vie'>Ánh sáng</span>
-                </a>
-            </div>
             <div class='row'>
               <div class='col-md-4 col-sm-6'>
                 {% for item in pictures1 %}
@@ -259,10 +232,10 @@
                     </div>
                   </div>
                   <div class='social-networkk marginLeft'>
-                    <div class='messenger'>
+                    <!-- <div class='messenger'>
                       <img src="{% static 'messenger.svg' %}" >
                       <div style='width: 100%;'>Share in Messenger</div>
-                    </div>
+                    </div> -->
                     <div class='fb'>
                       <img src="{% static 'fb.svg' %}" >
                       <div style="width: 100%;">Share in Facebook</div>
@@ -291,41 +264,76 @@
             </div>
             <div class='sponsor'>
               <div>
-                <div class='staylab'>
-                  <img class='circle' width='100' height='100' src="{% static 'Tinsideout.svg' %}" >
+                <div>
+                  <div class='staylab'>
+                    <a href='https://www.tinsideout.xyz/' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'Tinsideout.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='role text'>project leader</div>
+                  <div style="text-align: center;">
+                    <a class='name text' href='https://www.tinsideout.xyz/' target="_blank">Tinsideout</a>
+                  </div>
                 </div>
-                <div class='role text'>project leader</div>
-                <div class='name text'>Tinsideout</div>
+                <div style='margin-top: 50px'>
+                  <div class='staylab'>
+                    <a href='https://www.lixihatgiong.com/' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'gieo.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='text role'>sponsor</div>
+                  <div style="text-align: center;">
+                    <a class='text name' href='https://www.lixihatgiong.com/' target="_blank">Gieo</a>
+                  </div>
+                </div>
               </div>
               <div>
-                <div class='staylab'>
-                  <img class='circle' width='100' height='100' src="{% static 'Datdotr.svg' %}" >
+                <div>
+                  <div class='staylab'>
+                    <a href='https://www.datdotr.com/' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'Datdotr.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='role text'>logo design</div>
+                  <div style="text-align: center;">
+                    <a class='name text' href='https://www.datdotr.com/' target="_blank">Datdotr</a>
+                  </div>
                 </div>
-                <div class='role text'>logo design</div>
-                <div class='name text'>Datdotr</div>
+                <div style='margin-top: 50px'>
+                  <div class='staylab'>
+                    <a href='https://monosketch.vn/' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'Monosketch.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='text role'>workshop vendor</div>
+                  <div style="text-align: center;">
+                    <a class='text name' href='https://monosketch.vn/' target="_blank">Monosketch</a>
+                  </div>
+                </div>
               </div>
               <div>
-                <div class='staylab'>
-                  <img class='circle' width='100' height='100' src="{% static 'cafe.svg' %}" >
+                <div>
+                  <div class='staylab'>
+                    <a href='https://www.facebook.com/thehummingbirdcafesaigon/' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'cafe.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='role text'>location vendor</div>
+                  <div style="text-align: center;">
+                    <a class='text name' href='https://www.facebook.com/thehummingbirdcafesaigon/' target="_blank">The Hummingbird Cafe</a>
+                  </div>
                 </div>
-                <div class='role text'>location vendor</div>
-                <div class='text name'>The Hummingbird Cafe</div>
-              </div>
-            </div>
-            <div class="modal-container" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
-              <div>
-                <div class='staylab'>
-                  <img class='circle' width='100' height='100' src="{% static 'Monosketch.svg' %}" >
+                <div style='margin-top: 50px'>
+                  <div class='staylab'>
+                    <a href='https://www.staylab.co' target="_blank">
+                      <img class='circle' width='100' height='100' src="{% static 'stay.svg' %}" >
+                    </a>
+                  </div>
+                  <div class='text role'>website vendor</div>
+                  <div style="text-align: center;">
+                    <a class='text name' href='https://www.staylab.co' target="_blank">Staylab</a>
+                  </div>
                 </div>
-                <div class='text role'>workshop vendor</div>
-                <div class='text name'>Monosketch</div>
-              </div>
-              <div>
-                <div class='staylab'>
-                  <img class='circle' src="{% static 'stay.svg' %}" >
-                </div>
-                <div class='text role'>website vendor</div>
-                <div class='text name'>Staylab</div>
               </div>
             </div>
           </div>
@@ -341,35 +349,54 @@
         <div id="menu0" class="container tab-pane"><br>
           <div class='sponsor'>
             <div>
-              <img class='circle' width='100' height='100' src="{% static 'Tinsideout.svg' %}" >
+              <a href='https://www.tinsideout.xyz/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'Tinsideout.svg' %}" ></a>
               <div class='role textt texttt'>project leader</div>
-              <div class='name textt'>Tinsideout</div>
+              <div style="text-align: center;">
+                <a class='name textt' href='https://www.tinsideout.xyz/' target="_blank">Tinsideout</a>
+              </div>
             </div>
             <div>
-              <img class='circle' width='100' height='100' src="{% static 'Datdotr.svg' %}" >
+              <a href='https://www.datdotr.com/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'Datdotr.svg' %}" ></a>
               <div class='role textt texttt'>logo design</div>
-              <div class='name textt'>Datdotr</div>
+              <div style="text-align: center;">
+                <a href='https://www.datdotr.com/' target="_blank" class='name textt'>Datdotr</a>
+              </div>
             </div>
           </div>
           <div class='sponsor'>
             <div>
-              <img class='circle' width='100' height='100' src="{% static 'cafe.svg' %}" >
+              <a href='https://www.facebook.com/thehummingbirdcafesaigon/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'cafe.svg' %}" ></a>
               <div class='role textt texttt'>location vendor</div>
-              <div class='textt name'>The Hummingbird Cafe</div>
+              <div style="text-align: center;">
+                <a class='textt name' href='https://www.facebook.com/thehummingbirdcafesaigon/' target="_blank">The Hummingbird</a>
+              </div>
             </div>
             <div>
-              <img class='circle' width='100' height='100' src="{% static 'Monosketch.svg' %}" >
-              <div class='textt role texttt'>workshop vendor</div>
-              <div class='textt name'>Monosketch</div>
+              <a href='https://www.lixihatgiong.com/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'gieo.svg' %}" ></a>
+              <div class='textt textt role'>sponsor</div>
+              <div style="text-align: center;">
+                <a class='textt name' href='https://www.lixihatgiong.com/' target="_blank">Gieo</a>
+              </div>
             </div>
           </div>
-          <div class="modal-container" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+          <!-- <div class="modal-container" style="display: flex; justify-content: space-evenly; margin-top: 50px;"> -->
+          <div class='sponsor'>
             <div>
-              <div class='staylab'>
-                <img class='circle' src="{% static 'stay.svg' %}" >
+              <a href='https://monosketch.vn/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'Monosketch.svg' %}" ></a>
+              <div class='textt role texttt'>workshop vendor</div>
+              <div style="text-align: center;">
+                <a href='https://monosketch.vn/' target="_blank" class='textt name'>Monosketch</a>
               </div>
+            </div>
+            <div>
+              <!-- <div class='staylab'> -->
+                <!-- <img class='circle' src="{% static 'stay.svg' %}" > -->
+              <!-- </div> -->
+              <a href='https://www.staylab.co/' target="_blank"><img class='circle' width='100' height='100' src="{% static 'stay.svg' %}" ></a>
               <div class='textt texttt role'>website vendor</div>
-              <div class='textt  name'>Staylab</div>
+              <div style="text-align: center;">
+                <a href='https://www.staylab.co' target="_blank" class='textt name'>Staylab</a>
+              </div>
             </div>
           </div>
         </div>
@@ -403,10 +430,6 @@
                   </div>
                 </div>
                 <div class='social-networkk'>
-                  <div class='messenger'>
-                    <img src="{% static 'messenger.svg' %}" >
-                    <div style='width: 100%;'>Share in Messenger</div>
-                  </div>
                   <div class='fb'>
                     <img src="{% static 'fb.svg' %}" >
                     <div style="width: 100%;">Share in Facebook</div>
@@ -424,31 +447,6 @@
         </a>
         <div id="menu2" class="container" style='display: block'>
           <div class='categories'>
-            <a id='all' href="?category=all#home" onclick="select(1)">
-              <span class='eng'>🗂️All</span>
-                |
-              <span class='vie'>Tất cả</span>
-            </a>
-            <a id='soil' href="?category=soil#home" onclick="select(2)">
-              <span class='eng'>🌫️Soil</span>
-                |
-              <span class='vie'>Đất</span>
-            </a>
-            <a id='water' href="?category=water#home" onclick="select(3)">
-              <span class='eng'>💦Water</span>
-                |
-              <span class='vie'>Nước</span>
-            </a>
-            <a id='air' href="?category=air#home" onclick="select(4)">
-              <span class='eng'>💨Air</span>
-                |
-              <span class='vie'>Không khí</span>
-            </a>
-            <a id='light' href="?category=light#home" onclick="select(5)">
-              <span class='eng'>☀️️Light</span>
-                |
-              <span class='vie'>Ánh sáng</span>
-            </a>
           </div>
           <div class='row'>
             <div class='col-sm-4 col-6'>
@@ -577,13 +575,13 @@
   var url = new URL(url_string);
   var c = url.searchParams.get("category");
 
-  var xx = document.getElementById(c);
-  if (xx == null) {
-    var xx = document.getElementById('all');
-  } else {
+  // var xx = document.getElementById(c);
+  // if (xx == null) {
+  //   var xx = document.getElementById('all');
+  // } else {
 
-  }
-  xx.classList.add('selected');
+  // }
+  // xx.classList.add('selected');
 
   // Showcase modal
   const pos = url_string.indexOf('?albums=');

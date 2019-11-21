@@ -366,6 +366,9 @@ body {
 }
 
 @media only screen and (min-width: 481px) {
+  .tab-content {
+    margin-top: 48px;
+  }
   .modal-container {
     min-width: 86%;
   }
@@ -387,6 +390,10 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+  .modal-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .nextprev {
     display: flex;
     justify-content: space-between;

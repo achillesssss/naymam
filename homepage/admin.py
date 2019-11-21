@@ -23,7 +23,7 @@ class PictureAdmin(admin.ModelAdmin):
 
 
 class AlbumAdmin(admin.ModelAdmin):
-    list_display = ['name',]
+    list_display = [ 'id', 'name']
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'author':
