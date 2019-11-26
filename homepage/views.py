@@ -21,6 +21,7 @@ def album_to_json(album):
       'name': album.author.name,
       'description': album.author.description,
       'link': album.author.link,
+      'avatar': album.author.photo.url if album.author.photo else '/static/naymam-circle.gif',
     },
     'pictures': [picture_to_json(picture) for picture in album.real_pictures]
   }
