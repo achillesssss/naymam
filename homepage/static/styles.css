@@ -623,6 +623,10 @@ body {
   flex-direction: column;
 }
 
+.bio div:last-child {
+  word-break: break-word;
+}
+
 .authorr .avatar {
   margin-right: 40px;
   border-radius: 50%;
